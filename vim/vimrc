@@ -1,0 +1,50 @@
+set shell=/bin/sh         " fix for fish
+
+source ~/.vim/vundle.vim
+
+set noswapfile            " do not use swap files
+set autoread              " reload file if changed outside
+set encoding=utf-8        " set file encoding
+
+set tabstop=4             " set hard tab size
+set softtabstop=2         " set soft tab size
+set shiftwidth=2          " set autoindent size
+set expandtab             " use soft tabs
+
+set wildmenu              " show list of matching items when tab completing
+set number                " show line numbers
+set wrap                  " wrap lines
+set laststatus=2          " show the status bar
+set history=999           " set command history size
+
+set ignorecase            " searches are case insensitive...
+set smartcase             " ...unless they contain any capital letters
+set incsearch             " set incremental searching
+set hlsearch              " highlight search results
+
+syntax enable             " enable syntax highlighting
+colorscheme solarized     " set colorscheme
+set background=light      " set background color
+
+" show tabs and trailing whitespace with special characters
+set list listchars=tab:▸\ ,trail:·
+
+
+
+let mapleader = ','       " set <leader> key
+
+" cycle through open buffers with tab and shift-tab
+nnoremap <tab> :bnext<cr>
+nnoremap <s-tab> :bprevious<cr>
+
+source ~/.vim/plugin_config.vim     " load plugin configurations
+source ~/.vim/custom_functions.vim  " load custom functions
+
+" close current buffer and go to previous
+nnoremap <leader>d :bprevious <bar> :bd#<CR>
+
+" toggle search highlighting
+noremap <leader><space> :set hlsearch! hlsearch?<cr>
+
+" toggle paste mode
+map <leader>p :setlocal paste!<cr>
