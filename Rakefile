@@ -1,4 +1,15 @@
-task default: [:vim]
+task default: [:fish, :vim]
+
+task :fish do
+  unless Dir.exists?(ENV['HOME'] + '/.config')
+    run 'mkdir ~/.config'
+  end
+
+  unless File.symlink?(ENV['HOME'] + '/.config/fish')
+    run 'rm -rf ~/.config/fish'
+    run 'ln -s ~/dotfiles/fish ~/.config/fish'
+  end
+end
 
 task :vim do
   unless Dir.exists?(ENV['HOME'] + '/.vim')
