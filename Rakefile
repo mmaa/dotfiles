@@ -1,4 +1,4 @@
-task default: %i(fish git vim tmux)
+task default: %i(fish git vim tmux gem)
 
 task :fish do
   unless Dir.exists?(ENV['HOME'] + '/.config')
@@ -40,6 +40,12 @@ end
 task :tmux do
   unless File.exists?(ENV['HOME'] + '/.tmux.conf')
     run 'ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf'
+  end
+end
+
+task :gem do
+  unless File.exists?(ENV['HOME'] + '/.gemrc')
+    run 'ln -s ~/dotfiles/gem/gemrc ~/.gemrc'
   end
 end
 
