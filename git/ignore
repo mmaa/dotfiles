@@ -1,0 +1,16 @@
+.DS_Store
+.bundle/
+.livereload
+*.swp
+*.swo
+*.swn
+.netrwhist
+.rbenv-version
+.rbx/
+tags
+xcuserdata/
+*~.nib
+build/
+.tm_properties
+tmtags
+tmtagsHistory

@@ -1,4 +1,4 @@
-task default: [:fish, :vim]
+task default: %i(fish git vim)
 
 task :fish do
   unless Dir.exists?(ENV['HOME'] + '/.config')
@@ -8,6 +8,16 @@ task :fish do
   unless File.symlink?(ENV['HOME'] + '/.config/fish')
     run 'rm -rf ~/.config/fish'
     run 'ln -s ~/dotfiles/fish ~/.config/fish'
+  end
+end
+
+task :git do
+  unless File.exists?(ENV['HOME'] + '/.gitconfig')
+    run 'ln -s ~/dotfiles/git/config ~/.gitconfig'
+  end
+
+  unless File.exists?(ENV['HOME'] + '/.gitignore')
+    run 'ln -s ~/dotfiles/git/ignore ~/.gitignore'
   end
 end
 

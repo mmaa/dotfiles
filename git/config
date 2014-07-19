@@ -1,0 +1,35 @@
+[user]
+  name = Marcos Acosta
+  email = marcos@acosta.tv
+[core]
+  excludesfile = ~/.gitignore
+  quotepath = false
+  editor = vim
+[color]
+  ui = true
+[gui]
+  fontdiff = -family Menlo -size 11 -underline 0 -overstrike 0
+[branch]
+  autosetuprebase = always
+[push]
+  default = current
+[alias]
+  lg = log -n 10 --pretty=format:'%C(yellow)%H%C(reset) %Cgreen%cr%Creset %C(blue)%an%C(reset) %s'
+  lga = log --pretty=format:'%C(yellow)%H%C(reset) %Cgreen%cr%Creset %C(blue)%an%C(reset) %s'
+[merge]
+  tool = Kaleidoscope
+[diff]
+  tool = Kaleidoscope
+[difftool]
+  prompt = false
+[mergetool]
+  prompt = false
+  keepBackup = false
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
