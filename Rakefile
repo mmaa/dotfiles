@@ -13,7 +13,7 @@ task :vim do
     run 'git clone git@github.com:gmarik/Vundle.vim.git vim/bundle/Vundle.vim'
   end
 
-  run 'vim +PluginInstall +qall'
+  run 'vim +PluginInstall! +qall'
 end
 
 def run(command)

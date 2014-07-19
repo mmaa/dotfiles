@@ -4,8 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage itself
-Plugin 'gmarik/Vundle.vim'
+" let vundle manage itself
+Plugin 'gmarik/vundle.vim'
 
 " plugins
 Plugin 'tpope/vim-fugitive'
@@ -14,10 +14,15 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-endwise'
 Plugin 'rking/ag.vim'
+Plugin 'valloric/youcompleteme'
+Plugin 'sirver/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " languages
+Plugin 'dag/vim-fish'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'kchmck/vim-coffee-script'
 
 " colorschemes
 Plugin 'altercation/vim-colors-solarized'

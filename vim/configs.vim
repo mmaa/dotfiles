@@ -15,3 +15,11 @@ map <leader>f :Ag<space>
 
 " fugitive
 map <leader>b :Gblame<cr>
+
+" YouCompleteMe
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'

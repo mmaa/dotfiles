@@ -1,6 +1,6 @@
 set shell=/bin/sh         " fix for fish
 
-source ~/.vim/vundle.vim
+source ~/.vim/plugins.vim " load plugins
 
 set noswapfile            " do not use swap files
 set autoread              " reload file if changed outside
@@ -37,8 +37,8 @@ let mapleader = ','       " set <leader> key
 nnoremap <tab> :bnext<cr>
 nnoremap <s-tab> :bprevious<cr>
 
-source ~/.vim/plugin_config.vim     " load plugin configurations
-source ~/.vim/custom_functions.vim  " load custom functions
+source ~/.vim/configs.vim     " load plugin configurations
+source ~/.vim/functions.vim   " load custom functions
 
 " close current buffer and go to previous
 nnoremap <leader>d :bprevious <bar> :bd#<CR>
