@@ -1,4 +1,4 @@
-task default: %i(fish git vim)
+task default: %i(fish git vim tmux)
 
 task :fish do
   unless Dir.exists?(ENV['HOME'] + '/.config')
@@ -35,6 +35,12 @@ task :vim do
   end
 
   run 'vim +PluginInstall! +qall'
+end
+
+task :tmux do
+  unless File.exists?(ENV['HOME'] + '/.tmux.conf')
+    run 'ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf'
+  end
 end
 
 def run(command)
