@@ -29,9 +29,10 @@ set background=light      " set background color
 " show tabs and trailing whitespace with special characters
 set list listchars=tab:▸\ ,trail:·
 
+nmap <silent> <C-n> :cn<cr>   " move to next file in quickfix list
+nmap <silent> <C-p> :cp<cr>   " move to previous file in quickfix list
 
-
-let mapleader = ','       " set <leader> key
+let mapleader = ','           " set <leader> key
 
 " cycle through open buffers with tab and shift-tab
 nnoremap <tab> :bnext<cr>
