@@ -17,6 +17,7 @@ Plugin 'rking/ag.vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'wincent/command-t'
 
 " languages
 Plugin 'dag/vim-fish'

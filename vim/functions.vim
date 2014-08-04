@@ -25,4 +25,4 @@ function! SelectaCommand(choice_command, selecta_args, vim_command)
   redraw!
   exec a:vim_command . " " . selection
 endfunction
-nnoremap <leader>t :call SelectaCommand("find * -type f", "", ":e")<cr>
+" nnoremap <leader>t :call SelectaCommand("find * -type f", "", ":e")<cr>
