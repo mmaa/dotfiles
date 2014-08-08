@@ -52,6 +52,7 @@ end
 function rc;  rails console                                     ; end
 function rr;  rails runner $argv                                ; end
 function rg;  rails generate $argv                              ; end
+function buo; bu (brew outdated)                                ; end
 function gb;  git branch $argv                                  ; end
 function gc;  git checkout $argv                                ; end
 function gd;  git diff head $argv                               ; end
