@@ -1,4 +1,4 @@
-set guifont=Menlo:h11
+set guifont=InputMono:h11
 
 set guioptions-=T " remove toolbar
 set guioptions-=L " remove left scrollbar
