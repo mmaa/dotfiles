@@ -17,11 +17,20 @@ function fish_prompt --description 'Set prompt'
 
   # PWD
   set_color normal
-  echo -n (prompt_pwd)
+  echo -n (basename $PWD)
   set_color normal
 
-  echo -n (__terlar_git_prompt | sed 's/\|/ /')
+  # git
+  set -l index (git status --porcelain 2>/dev/null)
+  if test -z "$index"
+    set_color green
+  else
+    set_color yellow
+  end
+  echo -n (__fish_git_prompt | sed 's/[\(\)]//g')
+  set_color normal
 
+  # exit status
   if not test $last_status -eq 0
     set_color $fish_color_error
     echo -n " $last_status"
@@ -29,6 +38,6 @@ function fish_prompt --description 'Set prompt'
   end
 
   set_color blue
-  echo -n '❱ '
+  echo -n ' ❯ '
   set_color normal
 end
