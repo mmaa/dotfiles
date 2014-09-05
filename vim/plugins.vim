@@ -24,6 +24,8 @@ Plugin 'dag/vim-fish'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'groenewege/vim-less'
 
 " colorschemes
 Plugin 'altercation/vim-colors-solarized'
