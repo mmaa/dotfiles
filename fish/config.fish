@@ -7,7 +7,7 @@ function yt
     screen -dm youtube-dl -o "$directory/%(title)s.%(extractor)s.%(id)s.%(ext)s" $argv
   end
 
-  open $directory
+  open -g $directory
 end
 
 function ff
@@ -81,4 +81,4 @@ set -g -x RBENV_ROOT '/usr/local/var/rbenv'
 set PATH $RBENV_ROOT/bin $PATH
 . (rbenv init -|psub)
 
-set PATH ./bin $PATH
+set PATH ./bin ~/bin $PATH
