@@ -1,1 +1,1 @@
-Pry.config.history.file = "~/.pry_history.#{Dir.pwd.split('/').last}"
+Pry.config.history.file = "#{Dir.home}/.pry_history.#{File.basename(Dir.pwd)}"
