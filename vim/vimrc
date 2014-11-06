@@ -4,6 +4,7 @@ source ~/.vim/plugins.vim " load plugins
 
 set noswapfile            " do not use swap files
 set autoread              " reload file if changed outside
+set autowrite             " automatically save before commands like :next and :make
 set hidden                " allow hiding a buffer with unsaved changes
 set encoding=utf-8        " set file encoding
 
@@ -28,6 +29,19 @@ set hlsearch              " highlight search results
 syntax enable             " enable syntax highlighting
 colorscheme solarized     " set colorscheme
 set background=light      " set background color
+
+set backspace=indent,eol,start  " backspace through everything in insert mode
+set whichwrap+=<,>,h,l          " navigate through line wraps
+
+" lines at columns 81 (unix standard)
+" and 121 (github-safe)
+let &colorcolumn="81,121"
+
+" map the arrow keys to be based on display lines, not physical lines
+map <Down> gj
+map <Up> gk
+nnoremap j gj
+nnoremap k gk
 
 " show tabs and trailing whitespace with special characters
 set list listchars=tab:▸\ ,trail:·
