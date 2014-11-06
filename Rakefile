@@ -1,4 +1,4 @@
-task default: %i(fish git vim tmux gem)
+task default: %i(fish git vim tmux gem pry)
 
 task :fish do
   unless Dir.exists?(ENV['HOME'] + '/.config')
@@ -46,6 +46,12 @@ end
 task :gem do
   unless File.exists?(ENV['HOME'] + '/.gemrc')
     run 'ln -s ~/dotfiles/gem/gemrc ~/.gemrc'
+  end
+end
+
+task :pry do
+  unless File.exists?(ENV['HOME'] + '/.pryrc')
+    run 'ln -s ~/dotfiles/pry/pryrc ~/.pryrc'
   end
 end
 
