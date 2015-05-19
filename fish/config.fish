@@ -4,7 +4,7 @@ function yt
   set directory "$HOME/Downloads/"
 
   if count $argv >/dev/null
-    screen -dm youtube-dl -o "$directory/%(title)s.%(extractor)s.%(id)s.%(ext)s" $argv
+    screen -dm youtube-dl --recode-video mp4 -o "$directory/%(title)s.%(extractor)s.%(id)s.%(ext)s" $argv
   end
 
   open -g $directory
@@ -70,7 +70,7 @@ function la;  ls -F -1 -A $argv                                 ; end
 function ll;  ls -F -A -o -h $argv                              ; end
 function tm;  tmux attach; or tmux -u                           ; end
 
-set -g -x EDITOR 'vim'
+set -g -x EDITOR 'nvim'
 set -g -x PGDATA '/usr/local/var/postgres/'
 
 # homebrew
