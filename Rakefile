@@ -1,4 +1,4 @@
-task default: %i(fish git vim tmux gem pry)
+task default: %i(fish git vim neovim tmux gem pry)
 
 task :fish do
   unless Dir.exists?(ENV['HOME'] + '/.config')
@@ -35,6 +35,24 @@ task :vim do
   end
 
   run 'vim +PluginInstall! +qall'
+end
+
+task :neovim do
+  unless Dir.exists?(ENV['HOME'] + '/.nvim')
+    run 'ln -s ~/dotfiles/nvim/ ~/.nvim'
+  end
+
+  unless Dir.exists?('nvim/bundle')
+    run 'mkdir nvim/bundle'
+  end
+
+  Dir['nvim/bundle/*'].each do |dir|
+    FileUtils.cd(dir) do
+      puts "\033[34;47m\033[1m #{dir.split('/').last} \033[0m"
+      `git pull`
+      puts "\n"
+    end
+  end
 end
 
 task :tmux do
