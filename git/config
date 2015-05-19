@@ -2,13 +2,13 @@
   name = Marcos Acosta
   email = marcos@acosta.tv
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = /Users/mmaa/.gitignore
   quotepath = false
   editor = vim
 [color]
   ui = true
 [gui]
-  fontdiff = -family Menlo -size 11 -underline 0 -overstrike 0
+  fontdiff = -family Consolas -size 12 -underline 0 -overstrike 0
 [branch]
   autosetuprebase = always
 [push]
@@ -30,6 +30,11 @@
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustExitCode = true
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+[filter "hawser"]
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
+  required = true
+[filter "lfs"]
+  clean = git lfs clean %f
+  smudge = git lfs smudge %f
+  required = true
