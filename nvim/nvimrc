@@ -9,7 +9,6 @@ set hidden
 
 set number
 set wrap
-set wildmenu
 set cursorline
 set laststatus=2
 
@@ -29,7 +28,6 @@ set smartcase
 set incsearch
 set hlsearch
 
-set backspace=indent,eol,start
 set whichwrap+=<,>,h,l
 
 " mark columns
