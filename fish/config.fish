@@ -4,7 +4,7 @@ function yt
   set directory "$HOME/Downloads/"
 
   if count $argv >/dev/null
-    screen -dm youtube-dl --recode-video mp4 -o "$directory/%(title)s.%(extractor)s.%(id)s.%(ext)s" $argv
+    screen -dm youtube-dl -f mp4 -o "$directory/%(title)s.%(extractor)s.%(id)s.%(ext)s" $argv
   end
 
   open -g $directory
