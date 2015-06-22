@@ -4,7 +4,6 @@ execute pathogen#infect()
 
 syntax on
 filetype plugin indent on
-set autoread
 set hidden
 
 set number
@@ -25,8 +24,6 @@ set history=999
 
 set ignorecase
 set smartcase
-set incsearch
-set hlsearch
 
 set whichwrap+=<,>,h,l
 
