@@ -1,9 +1,17 @@
 set -g -x fish_greeting ''
 
+function tm
+  if count $argv > /dev/null
+    tmux new-session -A -s $argv
+  else
+    tmux new-session
+  end
+end
+
 function yt
   set directory "$HOME/Downloads/"
 
-  if count $argv >/dev/null
+  if count $argv > /dev/null
     screen -dm youtube-dl -f mp4 -o "$directory/%(title)s.%(extractor)s.%(id)s.%(ext)s" $argv
   end
 
@@ -14,7 +22,7 @@ function ff
   set directory "$HOME/Downloads/"
   set filetype ".mp4"
 
-  if count $argv >/dev/null
+  if count $argv > /dev/null
     if [ (count $argv) -gt 1 ]
       set filename $argv[2]
     else
@@ -32,7 +40,7 @@ function minecraft
 end
 
 function bu
-  if count $argv >/dev/null
+  if count $argv > /dev/null
     brew upgrade $argv; and brew cleanup --force
   else
     brew update; and brew outdated
@@ -68,7 +76,6 @@ function gs;  git status                                        ; end
 function l;   ls -F -1 $argv                                    ; end
 function la;  ls -F -1 -A $argv                                 ; end
 function ll;  ls -F -A -o -h $argv                              ; end
-function tm;  tmux attach; or tmux -u                           ; end
 
 set -g -x EDITOR 'nvim'
 set -g -x PGDATA '/usr/local/var/postgres/'
