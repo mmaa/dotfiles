@@ -14,7 +14,3 @@ map <leader>f :Ag<space>
 
 " fugitive
 map <leader>b :Gblame<cr>
-
-" ctrlp
-let g:ctrlp_map = '<leader>t'
-let g:ctrlp_cmd = 'CtrlP'

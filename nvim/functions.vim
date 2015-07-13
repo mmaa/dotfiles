@@ -14,3 +14,6 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+set rtp+=/usr/local/Cellar/fzf/HEAD
+map <leader>t :FZF<cr>
