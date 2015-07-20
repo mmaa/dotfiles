@@ -20,8 +20,6 @@ set expandtab
 set scrolloff=1
 set sidescrolloff=5
 
-set history=999
-
 set ignorecase
 set smartcase
 
