@@ -57,12 +57,15 @@ function rs
   end
 end
 
+abbr -a gb git branch
+abbr -a gc git checkout
+
 function rc;  rails console                                     ; end
 function rr;  rails runner $argv                                ; end
 function rg;  rails generate $argv                              ; end
 function buo; bu (brew outdated)                                ; end
-function gb;  git branch $argv                                  ; end
-function gc;  git checkout $argv                                ; end
+# function gb;  git branch $argv                                  ; end
+# function gc;  git checkout $argv                                ; end
 function gd;  git diff head $argv                               ; end
 function gdi; git diff head --ignore-space-change $argv         ; end
 function gdt; git difftool head $argv                           ; end
