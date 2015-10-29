@@ -4,13 +4,12 @@ execute pathogen#infect()
 
 filetype plugin indent on
 syntax enable
-set noswapfile
 set hidden
 
 set number
 set wrap
 set list
-set list listchars=tab:▸\ ,trail:⌟,nbsp:∴
+set list listchars=tab:▸\ ,trail:∙,nbsp:∴
 
 set background=dark
 colorscheme solarized
@@ -59,5 +58,5 @@ map <leader>y "*y
 " toggle paste mode
 map <leader>p :setlocal paste!<cr>
 
-source ~/.nvim/configs.vim
-source ~/.nvim/functions.vim
+source ~/.config/nvim/configs.vim
+source ~/.config/nvim/functions.vim

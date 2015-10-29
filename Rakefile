@@ -1,10 +1,12 @@
-task default: %i(fish git neovim tmux gem pry)
+task default: %i(config fish git neovim tmux gem pry)
 
-task :fish do
+task :config do
   unless Dir.exists?(ENV['HOME'] + '/.config')
     run 'mkdir ~/.config'
   end
+end
 
+task :fish do
   unless File.symlink?(ENV['HOME'] + '/.config/fish')
     run 'rm -rf ~/.config/fish'
     run 'ln -s ~/dotfiles/fish ~/.config/fish'
@@ -22,8 +24,8 @@ task :git do
 end
 
 task :neovim do
-  unless Dir.exists?(ENV['HOME'] + '/.nvim')
-    run 'ln -s ~/dotfiles/nvim/ ~/.nvim'
+  unless Dir.exists?(ENV['HOME'] + '/.config/nvim')
+    run 'ln -s ~/dotfiles/nvim/ ~/.config/nvim'
   end
 
   unless Dir.exists?('nvim/bundle')
