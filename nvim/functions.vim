@@ -15,5 +15,5 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-set rtp+=/usr/local/Cellar/fzf/HEAD
+set rtp+=/usr/local/opt/fzf/
 map <leader>t :FZF<cr>

@@ -8,6 +8,7 @@ let NERDSpaceDelims=1               " number of spaces before comments
 let g:airline_left_sep=''           " remove special characters from left side
 let g:airline_right_sep=''          " remove special characters from right side
 let g:airline#extensions#tabline#enabled=1    " show open buffers in tab line
+let g:airline#extensions#whitespace#enabled=0 " detect trailing whitespace
 
 " ag
 map <leader>f :Ag<space>

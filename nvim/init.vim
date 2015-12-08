@@ -8,10 +8,11 @@ set hidden
 
 set number
 set wrap
+set nojoinspaces
 set list
 set list listchars=tab:▸\ ,trail:∙,nbsp:∴
 
-set background=dark
+set background=light
 colorscheme solarized
 
 set tabstop=4
