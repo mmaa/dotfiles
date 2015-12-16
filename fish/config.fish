@@ -47,6 +47,18 @@ function bu
   end
 end
 
+function buh
+  set packages (head_packages)
+  echo $packages
+  brew reinstall --HEAD $packages
+end
+
+function head_packages
+  find /usr/local/Cellar/ -maxdepth 2 -mindepth 2 | \
+  egrep 'HEAD$' | \
+  ruby -e 'gets(nil).split("\n").each { |line| puts line.split("/")[-2] }'
+end
+
 function rs
   if test -e Procfile.local
     foreman start -f Procfile.local
