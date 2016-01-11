@@ -72,6 +72,7 @@ end
 abbr -a gb git branch
 abbr -a gc git checkout
 
+function tml; tmux list-sessions                                ; end
 function rc;  rails console                                     ; end
 function rr;  rails runner $argv                                ; end
 function rg;  rails generate $argv                              ; end
