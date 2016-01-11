@@ -3,6 +3,7 @@ function fish_prompt --description 'Set prompt'
 
   set_color magenta
   echo -n '● '
+  echo -n (date "+%H:%M ")
   set_color normal
 
   # user@host
