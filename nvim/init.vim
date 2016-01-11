@@ -6,6 +6,8 @@ filetype plugin indent on
 syntax enable
 set hidden
 
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
 set number
 set wrap
 set nojoinspaces
