@@ -6,7 +6,12 @@
   quotepath = false
   editor = nvim
 [color]
-  ui = true
+  ui = always
+[color "diff-highlight"]
+  oldNormal = "red bold"
+  oldHighlight = "red bold 52"
+  newNormal = "green bold"
+  newHighlight = "green bold 22"
 [gui]
   fontdiff = -family Consolas -size 12 -underline 0 -overstrike 0
 [branch]

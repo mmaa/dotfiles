@@ -81,6 +81,7 @@ function buo; bu (brew outdated)                                ; end
 # function gc;  git checkout $argv                                ; end
 function gd;  git diff head $argv                               ; end
 function gdi; git diff head --ignore-space-change $argv         ; end
+function gdc; git diff head --color --ignore-space-change $argv | diff-so-fancy         ; end
 function gdt; git difftool head $argv                           ; end
 function gg;  git add -A .; and gs                              ; end
 function gm;  git commit                                        ; end
