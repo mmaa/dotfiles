@@ -97,7 +97,7 @@ function ll;  ls -F -A -o -h $argv                              ; end
 set -g -x EDITOR 'nvim'
 set -g -x PGDATA '/usr/local/var/postgres/'
 
-set -g -x FZF_DEFAULT_COMMAND '(git ls-tree -r --name-only HEAD || find . -path "*/\.*" -prune -o -type f -print -o -type l -print | sed s/^..//) 2> /dev/null'
+set -g -x FZF_DEFAULT_COMMAND 'ag -g ""'
 
 # homebrew
 set -g -x PATH /usr/local/bin /usr/local/sbin $PATH
