@@ -96,15 +96,11 @@ function ll;  ls -F -A -o -h $argv                              ; end
 
 set -g -x EDITOR 'nvim'
 set -g -x PGDATA '/usr/local/var/postgres/'
-
 set -g -x FZF_DEFAULT_COMMAND 'ag -g ""'
 
-# homebrew
-set -g -x PATH /usr/local/bin /usr/local/sbin $PATH
-
-# rbenv
-set -g -x RBENV_ROOT '/usr/local/var/rbenv'
-set PATH $RBENV_ROOT/bin $PATH
-. (rbenv init -|psub)
-
+set -g -x PATH /usr/local/bin $PATH
 set PATH ./bin ~/bin $PATH
+
+source /usr/local/share/chruby/chruby.fish
+source /usr/local/share/chruby/auto.fish
+chruby ruby-2.2.3
