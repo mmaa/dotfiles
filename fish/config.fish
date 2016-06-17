@@ -61,11 +61,11 @@ end
 
 function rs
   if test -e Procfile.local
-    foreman start -f Procfile.local
+    bundle exec foreman start -f Procfile.local
   else if test -e Procfile.dev
-    foreman start -f Procfile.dev
+    bundle exec foreman start -f Procfile.dev
   else
-    rails server
+    bundle exec rails server
   end
 end
 
@@ -73,9 +73,9 @@ abbr -a gb git branch
 abbr -a gc git checkout
 
 function tml; tmux list-sessions                                ; end
-function rc;  rails console                                     ; end
-function rr;  rails runner $argv                                ; end
-function rg;  rails generate $argv                              ; end
+function rc;  bundle exec rails console                         ; end
+function rr;  bundle exec rails runner $argv                    ; end
+function rg;  bundle exec rails generate $argv                  ; end
 function buo; bu (brew outdated)                                ; end
 # function gb;  git branch $argv                                  ; end
 # function gc;  git checkout $argv                                ; end
