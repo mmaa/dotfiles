@@ -79,8 +79,6 @@ function rc;  bundle exec rails console                         ; end
 function rr;  bundle exec rails runner $argv                    ; end
 function rg;  bundle exec rails generate $argv                  ; end
 function buo; bu (brew outdated)                                ; end
-# function gb;  git branch $argv                                  ; end
-# function gc;  git checkout $argv                                ; end
 function gd;  git diff head $argv                               ; end
 function gdi; git diff head --ignore-space-change $argv         ; end
 function gdc; git diff head --color --ignore-space-change $argv | diff-so-fancy         ; end
