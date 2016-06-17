@@ -2,8 +2,6 @@ set shell=/bin/sh
 
 execute pathogen#infect()
 
-filetype plugin indent on
-syntax enable
 set hidden
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
