@@ -30,8 +30,7 @@ set whichwrap+=<,>,h,l
 
 " mark columns
 " 81 (unix standard)
-" 121 (github-safe)
-let &colorcolumn="81,121"
+let &colorcolumn="81"
 
 " map the arrow keys to be based on display lines,
 " not physical lines
