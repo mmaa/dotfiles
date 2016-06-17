@@ -103,4 +103,4 @@ set PATH ./bin ~/bin $PATH
 
 source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish
-chruby ruby-2.2.3
+source "$HOME/.chrubyrc"
