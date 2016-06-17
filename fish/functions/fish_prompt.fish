@@ -2,8 +2,9 @@ function fish_prompt --description 'Set prompt'
   set -l last_status $status
 
   set_color magenta
-  echo -n '● '
-  echo -n (date "+%H:%M ")
+  # echo -n '● '
+  echo -n '💥  '
+  # echo -n (date "+%H:%M ")
   set_color normal
 
   # user@host
@@ -18,7 +19,8 @@ function fish_prompt --description 'Set prompt'
 
   # PWD
   set_color normal
-  echo -n (basename $PWD)
+  # echo -n (basename $PWD)
+  echo -n (prompt_pwd)
   set_color normal
 
   # git
@@ -39,6 +41,7 @@ function fish_prompt --description 'Set prompt'
   end
 
   set_color blue
-  echo -n ' ❯ '
+  # echo -n ' ❯ '
+  echo -n ' 🚀  '
   set_color normal
 end
