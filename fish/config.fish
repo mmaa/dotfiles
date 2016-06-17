@@ -1,11 +1,13 @@
-set -g -x fish_greeting ''
+set -g -x fish_greeting ""
 
 function tm
   if count $argv > /dev/null
-    tmux new-session -A -s $argv
+    set name $argv
   else
-    tmux new-session
+    set name (basename $PWD)
   end
+
+  tmux new-session -A -s $name
 end
 
 function yt
