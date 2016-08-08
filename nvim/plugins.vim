@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugins')
 
 Plug 'rking/ag.vim'
 Plug 'ElmCast/elm-vim'
