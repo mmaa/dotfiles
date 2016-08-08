@@ -16,3 +16,8 @@ map <leader>f :Ag<space>
 
 " fugitive
 map <leader>b :Gblame<cr>
+
+" neomake
+let g:neomake_ruby_enabled_makers = ['mri']
+let g:neomake_javascript_enabled_makers = ['eslint']
+autocmd BufWritePost,BufEnter *.rb,*.js,*.jsx Neomake
