@@ -73,6 +73,7 @@ end
 
 abbr -a gb git branch
 abbr -a gc git checkout
+abbr -a bx bundle exec
 
 function tml; tmux list-sessions                                ; end
 function rc;  bundle exec rails console                         ; end
@@ -99,7 +100,7 @@ set -g -x PGDATA '/usr/local/var/postgres/'
 set -g -x FZF_DEFAULT_COMMAND 'ag -g ""'
 
 set -g -x PATH /usr/local/bin $PATH
-set PATH ./bin ~/bin $PATH
+set -g -x PATH /usr/local/sbin $PATH
 
 source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish

@@ -1,5 +1,6 @@
 " NERD Tree
 map <leader>n :NERDTreeToggle<cr>
+map <leader>N :NERDTreeFind<cr>
 
 " NERD Commenter
 let NERDSpaceDelims=1               " number of spaces before comments

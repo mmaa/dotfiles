@@ -25,6 +25,7 @@
   tool = Kaleidoscope
 [diff]
   tool = Kaleidoscope
+  compactionHeuristic = true
 [difftool]
   prompt = false
 [mergetool]
@@ -44,4 +45,6 @@
   smudge = git lfs smudge %f
   required = true
 [commit]
-	verbose = true
+  verbose = true
+[interactive]
+  diffFilter = diff-highlight
