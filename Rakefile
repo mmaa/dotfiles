@@ -27,18 +27,6 @@ task :neovim do
   unless Dir.exists?(ENV['HOME'] + '/.config/nvim')
     run 'ln -s ~/dotfiles/nvim/ ~/.config/nvim'
   end
-
-  unless Dir.exists?('nvim/bundle')
-    run 'mkdir nvim/bundle'
-  end
-
-  Dir['nvim/bundle/*'].each do |dir|
-    FileUtils.cd(dir) do
-      puts "\033[34;47m\033[1m #{dir.split('/').last} \033[0m"
-      `git pull`
-      puts "\n"
-    end
-  end
 end
 
 task :tmux do

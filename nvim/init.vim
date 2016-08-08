@@ -1,6 +1,6 @@
 set shell=/bin/sh
 
-execute pathogen#infect()
+source ~/.config/nvim/plugins.vim
 
 set hidden
 
