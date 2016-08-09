@@ -17,5 +17,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'mxw/vim-jsx'
 Plug 'groenewege/vim-less'
 Plug 'vim-ruby/vim-ruby'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()

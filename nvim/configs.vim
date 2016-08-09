@@ -21,3 +21,7 @@ map <leader>b :Gblame<cr>
 let g:neomake_ruby_enabled_makers = ['mri']
 let g:neomake_javascript_enabled_makers = ['eslint']
 autocmd BufWritePost,BufEnter *.rb,*.js,*.jsx Neomake
+
+" vim-easy-align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
