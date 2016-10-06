@@ -37,18 +37,6 @@ function ff
   open $directory
 end
 
-function minecraft
-  screen -dm java -d64 -Xms4G -Xmx4G -jar /Applications/Minecraft.app/Contents/Resources/Java/Bootstrap.jar
-end
-
-function bu
-  if count $argv > /dev/null
-    brew upgrade $argv; and brew cleanup --force
-  else
-    brew update; and brew outdated
-  end
-end
-
 function buh
   set packages (head_packages)
   echo $packages
@@ -73,6 +61,7 @@ end
 
 abbr -a gb git branch
 abbr -a gc git checkout
+abbr -a gt git stash
 abbr -a bx bundle exec
 
 function tml; tmux list-sessions                                ; end
