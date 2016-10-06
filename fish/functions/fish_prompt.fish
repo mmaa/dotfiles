@@ -2,24 +2,11 @@ function fish_prompt --description 'Set prompt'
   set -l last_status $status
 
   set_color magenta
-  # echo -n '● '
-  echo -n '💥  '
-  # echo -n (date "+%H:%M ")
+  echo -n '● '
   set_color normal
-
-  # user@host
-  # echo -n (whoami)
-  # set_color blue
-  # echo -n '@'
-  # set_color normal
-  # echo -n (hostname -s)
-  # set_color blue
-  # echo -n ':'
-  # set_color normal
 
   # PWD
   set_color normal
-  # echo -n (basename $PWD)
   echo -n (prompt_pwd)
   set_color normal
 
@@ -41,7 +28,6 @@ function fish_prompt --description 'Set prompt'
   end
 
   set_color blue
-  # echo -n ' ❯ '
-  echo -n ' 🚀  '
+  echo -n ' ❯ '
   set_color normal
 end
