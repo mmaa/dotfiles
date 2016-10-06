@@ -99,9 +99,4 @@ set -g -x EDITOR 'nvim'
 set -g -x PGDATA '/usr/local/var/postgres/'
 set -g -x FZF_DEFAULT_COMMAND 'ag -g ""'
 
-set -g -x PATH /usr/local/bin $PATH
-set -g -x PATH /usr/local/sbin $PATH
-
-source /usr/local/share/chruby/chruby.fish
-source /usr/local/share/chruby/auto.fish
-source "$HOME/.chrubyrc"
+status --is-interactive; and . (rbenv init -|psub)
