@@ -28,13 +28,12 @@ function ff
     if [ (count $argv) -gt 1 ]
       set filename $argv[2]
     else
-      set filename 'output'
+      set filename (ruby -e 'require "uri"; print "#{URI.parse(ARGV[0]).host}.#{Time.now.to_i}"' $argv[1])
     end
 
+    open $directory
     ffmpeg -i $argv[1] -acodec copy -vcodec copy  -y -loglevel info -absf aac_adtstoasc -f mp4 $directory$filename$filetype
   end
-
-  open $directory
 end
 
 function buh
