@@ -19,6 +19,7 @@
 [push]
   default = current
 [alias]
+  cp = cherry-pick
   lg = log -n 10 --pretty=format:'%C(yellow)%H%C(reset) %Cgreen%cr%Creset %C(blue)%an%C(reset) %s'
   lga = log --pretty=format:'%C(yellow)%H%C(reset) %Cgreen%cr%Creset %C(blue)%an%C(reset) %s'
 [merge]
