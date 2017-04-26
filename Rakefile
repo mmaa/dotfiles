@@ -1,4 +1,4 @@
-task default: %i(config fish git neovim tmux gem pry)
+task default: %i(config fish alacritty git neovim tmux gem pry mpv)
 
 task :config do
   unless Dir.exists?(ENV['HOME'] + '/.config')
@@ -10,6 +10,12 @@ task :fish do
   unless File.symlink?(ENV['HOME'] + '/.config/fish')
     run 'rm -rf ~/.config/fish'
     run 'ln -s ~/dotfiles/fish ~/.config/fish'
+  end
+end
+
+task :alacritty do
+  unless Dir.exists?(ENV['HOME'] + '/.config/alacritty')
+    run 'ln -s ~/dotfiles/alacritty/ ~/.config/alacritty'
   end
 end
 
@@ -44,6 +50,12 @@ end
 task :pry do
   unless File.exists?(ENV['HOME'] + '/.pryrc')
     run 'ln -s ~/dotfiles/pry/pryrc ~/.pryrc'
+  end
+end
+
+task :mpv do
+  unless Dir.exists?(ENV['HOME'] + '/.config/mpv')
+    run 'ln -s ~/dotfiles/mpv/ ~/.config/mpv'
   end
 end
 
