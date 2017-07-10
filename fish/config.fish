@@ -50,11 +50,11 @@ end
 
 function rs
   if test -e Procfile.local
-    bundle exec foreman start -f Procfile.local
+    foreman start -f Procfile.local
   else if test -e Procfile.dev
-    bundle exec foreman start -f Procfile.dev
+    foreman start -f Procfile.dev
   else
-    bundle exec rails server
+    rails server
   end
 end
 
@@ -64,13 +64,11 @@ abbr -a gt git stash
 abbr -a bx bundle exec
 
 function tml; tmux list-sessions                                ; end
-function rc;  bundle exec rails console                         ; end
-function rr;  bundle exec rails runner $argv                    ; end
-function rg;  bundle exec rails generate $argv                  ; end
+function rc;  rails console                                     ; end
+function rr;  rails runner $argv                                ; end
 function buo; bu (brew outdated)                                ; end
 function gd;  git diff head $argv                               ; end
 function gdi; git diff head --ignore-space-change $argv         ; end
-function gdc; git diff head --color --ignore-space-change $argv | diff-so-fancy         ; end
 function gdt; git difftool head $argv                           ; end
 function gg;  git add -A .; and gs                              ; end
 function gm;  git commit                                        ; end
@@ -85,6 +83,9 @@ function ll;  ls -F -A -o -h $argv                              ; end
 
 set -g -x EDITOR 'nvim'
 set -g -x PGDATA '/usr/local/var/postgres/'
-set -g -x FZF_DEFAULT_COMMAND 'ag -g ""'
+set -g -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
-status --is-interactive; and . (rbenv init -|psub)
+status --is-interactive; and source (rbenv init -|psub)
+
+set PATH ~/.cargo/bin $PATH
+set PATH ./bin ~/bin $PATH

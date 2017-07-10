@@ -15,10 +15,13 @@ set list listchars=tab:▸\ ,trail:∙,nbsp:∴
 set background=light
 colorscheme solarized
 
+set fileformats=unix
 set tabstop=4
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+set mouse=a
 
 set scrolloff=1
 set sidescrolloff=5
@@ -47,10 +50,11 @@ nmap <silent> <C-p> :cp<cr>
 let mapleader = ','
 
 " close current buffer and go to previous
-nnoremap <leader>d :bprevious <bar> :bd#<CR>
+nnoremap <leader>d :bprevious <bar> :bd#<cr>
 
 " toggle search highlighting
 noremap <leader><space> :set hlsearch! hlsearch?<cr>
+nnoremap <esc> :noh<cr>
 
 " yank to system clipboard
 map <leader>y "*y
