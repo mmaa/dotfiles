@@ -1,4 +1,4 @@
-task default: %w(config fish alacritty git neovim tmux gem pry mpv)
+task default: %w(config fish alacritty git neovim tmux gem pry mpv youtube-dl)
 
 task "config" do
   unless Dir.exists?(ENV["HOME"] + "/.config")
@@ -56,6 +56,12 @@ end
 task "mpv" do
   unless Dir.exists?(ENV["HOME"] + "/.config/mpv")
     run "ln -s ~/dotfiles/mpv/ ~/.config/mpv"
+  end
+end
+
+task "youtube-dl" do
+  unless Dir.exists?(ENV["HOME"] + "/.config/youtube-dl")
+    run "ln -s ~/dotfiles/youtube-dl/ ~/.config/youtube-dl"
   end
 end
 
