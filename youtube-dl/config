@@ -1,1 +1,1 @@
--o "$directory/%(title)s.%(extractor)s.%(id)s.%(ext)s"
+-o "$HOME/Downloads/%(title)s.%(extractor)s.%(id)s.%(ext)s"

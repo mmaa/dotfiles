@@ -11,13 +11,11 @@ function tm
 end
 
 function yt
-  set directory "$HOME/Downloads/"
-
   if count $argv > /dev/null
     screen -dm youtube-dl $argv
   end
 
-  open -g $directory
+  open -g "$HOME/Downloads/"
 end
 
 function ff
