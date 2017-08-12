@@ -1,8 +1,14 @@
-task default: %w(config fish alacritty git neovim tmux gem pry mpv youtube-dl)
+task default: %w(config terminfo fish alacritty git neovim tmux gem pry mpv youtube-dl)
 
 task "config" do
   unless Dir.exists?(ENV["HOME"] + "/.config")
     run "mkdir ~/.config"
+  end
+end
+
+task "config" do
+  unless Dir.exists?(ENV["HOME"] + "/.terminfo")
+    run "ln -s ~/dotfiles/terminfo ~/.terminfo"
   end
 end
 
