@@ -4,7 +4,9 @@ source ~/.config/nvim/plugins.vim
 
 set hidden
 
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+set undofile
+set undolevels=9999 " maximum number of changes that can be undone
+set undoreload=9999 " maximum number lines to save for undo on a buffer reload
 
 set number
 set wrap
@@ -14,6 +16,8 @@ set list listchars=tab:▸\ ,trail:∙,nbsp:∴
 
 set background=light
 colorscheme solarized
+highlight Comment cterm=italic
+highlight Search ctermbg=NONE ctermfg=NONE cterm=underline
 
 set fileformats=unix
 set tabstop=4
@@ -28,6 +32,8 @@ set sidescrolloff=5
 
 set ignorecase
 set smartcase
+
+set inccommand=split
 
 set whichwrap+=<,>,h,l
 
@@ -53,7 +59,6 @@ let mapleader = ','
 nnoremap <leader>d :bprevious <bar> :bd#<cr>
 
 " toggle search highlighting
-noremap <leader><space> :set hlsearch! hlsearch?<cr>
 nnoremap <esc> :noh<cr>
 
 " yank to system clipboard

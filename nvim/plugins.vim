@@ -1,11 +1,11 @@
 call plug#begin('~/.config/nvim/plugins')
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'ElmCast/elm-vim'
 Plug 'neomake/neomake'
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'vim-airline/vim-airline'
