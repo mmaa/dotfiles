@@ -61,27 +61,27 @@ abbr -a gc git checkout
 abbr -a gt git stash
 abbr -a bx bundle exec
 
-function tml; tmux list-sessions                                ; end
-function rc;  rails console                                     ; end
-function rr;  rails runner $argv                                ; end
-function buo; bu (brew outdated)                                ; end
-function gd;  git diff head $argv                               ; end
-function gdi; git diff head --ignore-space-change $argv         ; end
-function gdt; git difftool head $argv                           ; end
-function gg;  git add -A .; and gs                              ; end
-function gm;  git commit                                        ; end
-function gma; git commit --amend                                ; end
-function gpl; git pull --prune                                  ; end
-function gps; git push $argv                                    ; end
-function gpz; gpl; and gps                                      ; end
-function gs;  git status                                        ; end
-function l;   exa $argv                                         ; end
-function lt;  exa -T $argv                                      ; end
-function ll;  exa -l -a $argv                                   ; end
+function tml;   tmux list-sessions                                ; end
+function rc;    rails console                                     ; end
+function rr;    rails runner $argv                                ; end
+function gd;    git diff head $argv                               ; end
+function gdi;   git diff head --ignore-space-change $argv         ; end
+function gdt;   git difftool head $argv                           ; end
+function gg;    git add -A .; and gs                              ; end
+function gm;    git commit $argv                                  ; end
+function gwip;  gg; and git commit -m "WIP"                       ; end
+function gpl;   git pull --prune                                  ; end
+function gps;   git push $argv                                    ; end
+function gpz;   gpl; and gps                                      ; end
+function gs;    git status                                        ; end
+function l;     exa $argv                                         ; end
+function lt;    exa -T $argv                                      ; end
+function ll;    exa -l -a $argv                                   ; end
 
 set -g -x EDITOR 'nvim'
 set -g -x PGDATA '/usr/local/var/postgres/'
-set -g -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+set -g -x ERL_AFLAGS '-kernel shell_history enabled'
+set -g -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 
 status --is-interactive; and source (rbenv init -|psub)
 
