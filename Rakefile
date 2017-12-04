@@ -1,4 +1,4 @@
-task default: %w(config terminfo fish alacritty git neovim tmux gem pry mpv youtube-dl)
+task default: %w(config ssh terminfo fish alacritty git neovim tmux gem pry mpv youtube-dl)
 
 task "config" do
   unless Dir.exists?(ENV["HOME"] + "/.config")
@@ -6,7 +6,14 @@ task "config" do
   end
 end
 
-task "config" do
+task "ssh" do
+  unless Dir.exists?(ENV["HOME"] + "/.ssh")
+    run "mkdir ~/.ssh"
+    run "ln -s ~/dotfiles/ssh/config ~/.ssh/config"
+  end
+end
+
+task "terminfo" do
   unless Dir.exists?(ENV["HOME"] + "/.terminfo")
     run "ln -s ~/dotfiles/terminfo ~/.terminfo"
   end
