@@ -14,3 +14,10 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" upgrade and update plug
+function PlugUp()
+  :PlugUpgrade
+  :PlugUpdate
+endfunction
+nmap :PU :call PlugUp()
