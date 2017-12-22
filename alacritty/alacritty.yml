@@ -12,6 +12,7 @@ draw_bold_text_with_bright_colors: false
 
 font:
   size: 13.0
+  use_thin_strokes: true
   offset:
     x: 0.0
     y: 4.0
