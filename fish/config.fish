@@ -61,6 +61,7 @@ abbr -a gc git checkout
 abbr -a gt git stash
 abbr -a bx bundle exec
 
+function vi;    nvim $argv                                        ; end
 function tml;   tmux list-sessions                                ; end
 function rc;    rails console                                     ; end
 function rr;    rails runner $argv                                ; end
