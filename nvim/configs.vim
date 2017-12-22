@@ -24,6 +24,7 @@ map <leader>t :FZF<cr>
 map <leader>b :Gblame<cr>
 
 " neomake
+let g:neomake_javascript_eslint_exe = $PWD . '/node_modules/.bin/eslint'
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
