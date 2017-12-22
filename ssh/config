@@ -12,9 +12,13 @@ Host mini
   HostName  mmaa00.ddns.net
   Port      2222
 
+Host pi-hole.local
+  User pi
+  HostName pi-hole.local
+
 Host algo
   User root
-  HostName 138.197.72.52
+  HostName 104.131.72.7
   IdentityFile ~/algo/configs/algo.pem
 
 ### ShippingEasy
