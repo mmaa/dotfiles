@@ -1,8 +1,10 @@
 function fish_prompt --description 'Set prompt'
   set -l last_status $status
 
+  set_color --bold blue
+  echo -n "$USER "
   set_color --bold magenta
-  echo -n "$USER ● "
+  echo -n "● "
   set_color normal
 
   # PWD
