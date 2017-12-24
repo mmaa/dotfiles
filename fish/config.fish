@@ -86,5 +86,4 @@ set -g -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 
 status --is-interactive; and source (rbenv init -|psub)
 
-set PATH ~/.cargo/bin $PATH
 set PATH ./bin ~/bin $PATH
