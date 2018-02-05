@@ -54,7 +54,7 @@ Host *.seadmin.com
 # Aliases
 Host stg1
   User macosta
-  HostName shipit-scheduler-i-03a2e42e041f8dafb.staging-shard1.us-west-2.aws.seadmin.com
+  HostName shipit-scheduler-i-009c6c54aae9e05c4.staging-shard1.us-west-2.aws.seadmin.com
   ProxyJump staging-bastion.aws.seadmin.com
 
 Host stg2
