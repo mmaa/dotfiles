@@ -12,26 +12,23 @@ Host mini
   HostName  mmaa00.ddns.net
   Port      2222
 
+Host imp11
+  User      mmaa
+  HostName  mmaa00.ddns.net
+  Port      2225
+
 Host pi-hole.local
   User pi
   HostName pi-hole.local
 
-Host algo
-  User root
-  HostName 104.131.72.7
-  IdentityFile ~/algo/configs/algo.pem
-
 ### ShippingEasy
 
 # Always use agent forwarding when connecting to bastions
-Host *-bastion*.seadmin.com
+Host *-bastion.aws.seadmin.com
   ForwardAgent yes
-
-# Deploy host
-Host deploy.seadmin.com
-  User shipit
-  ForwardAgent yes
-  ProxyJump production-bastion.aws.seadmin.com
+  HostKeyAlias shippingeasy-bastions
+  StrictHostKeyChecking yes
+  UserKnownHostsFile ~/.ssh/known_hosts
 
 # Environments
 Host *.production-*.*.aws.seadmin.com
@@ -47,9 +44,16 @@ Host *.slush-master.*.aws.seadmin.com
   ProxyJump slush-master-bastion.aws.seadmin.com
 
 # Defaults
-Host *.seadmin.com
+Host *aws.seadmin.com
   User macosta
+  StrictHostKeyChecking no
 
+  # Do not verify/store host keys for cloud instances
+  UserKnownHostsFile /dev/null
+
+  # Suppress "Permanently added <host>" warning on every connection caused by
+  # preceding line
+  LogLevel error
 
 # Aliases
 Host stg1
@@ -59,12 +63,12 @@ Host stg1
 
 Host stg2
   User macosta
-  HostName shipit-scheduler-i-09e84172eb4882815.staging-shard2.us-west-1.aws.seadmin.com
+  HostName shipit-scheduler-i-065e9f399d865b6ad.staging-shard2.us-west-1.aws.seadmin.com
   ProxyJump staging-bastion.aws.seadmin.com
 
 Host se1
   User macosta
-  HostName shipit-scheduler-i-07e9408016c0ef9c1.production-shard1.us-west-2.aws.seadmin.com
+  HostName shipit-scheduler-i-00accd0afa35a4189.production-shard1.us-west-2.aws.seadmin.com
   ProxyJump production-bastion.aws.seadmin.com
 
 Host se2
@@ -74,5 +78,5 @@ Host se2
 
 Host se3
   User macosta
-  HostName shipit-scheduler-i-043a57aa885813dfd.production-shard3.us-east-2.aws.seadmin.com
+  HostName shipit-scheduler-i-0fb503a062daac8b2.production-shard2.us-west-1.aws.seadmin.com
   ProxyJump production-bastion.aws.seadmin.com
