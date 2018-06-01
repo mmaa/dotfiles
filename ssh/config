@@ -78,5 +78,5 @@ Host se2
 
 Host se3
   User macosta
-  HostName shipit-scheduler-i-0fb503a062daac8b2.production-shard2.us-west-1.aws.seadmin.com
+  HostName shipit-scheduler-i-043a57aa885813dfd.production-shard3.us-east-2.aws.seadmin.com
   ProxyJump production-bastion.aws.seadmin.com
