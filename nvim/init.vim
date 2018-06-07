@@ -48,6 +48,10 @@ map <Up> gk
 nnoremap j gj
 nnoremap k gk
 
+" scroll one line at a time with the mouse
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
 nnoremap <tab> :bnext<cr>
 nnoremap <s-tab> :bprevious<cr>
 nmap <silent> <C-n> :cn<cr>
