@@ -1,11 +1,14 @@
 function fish_prompt --description 'Set prompt'
   set -l last_status $status
 
+  set_color --bold magenta
+  echo -n "● "
+  # set_color normal
+  echo -n (date "+%H:%M ")
   set_color --bold blue
   echo -n (hostname | cut -d . -f 1)
-  set_color --bold magenta
-  echo -n " ● "
   set_color normal
+  echo -n " "
 
   # PWD
   set_color normal
