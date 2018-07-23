@@ -38,11 +38,11 @@ abbr -a gb git branch
 abbr -a gc git checkout
 abbr -a gt git stash
 abbr -a bx bundle exec
+abbr -a rc rails console
+abbr -a rr rails runner
 
 function vi;    nvim $argv                                        ; end
 function tml;   tmux list-sessions                                ; end
-function rc;    rails console                                     ; end
-function rr;    rails runner $argv                                ; end
 function gd;    git diff head $argv                               ; end
 function gdi;   git diff head --ignore-space-change $argv         ; end
 function gdt;   git difftool head $argv                           ; end
