@@ -42,12 +42,12 @@ Host *aws.seadmin.com !bastion.aws.seadmin.com !bastion*
 # Aliases
 Host stg1
   User macosta
-  HostName shipit-scheduler-i-0c2107937d3a23991.staging-shard1.us-west-2.aws.seadmin.com
+  HostName shipit-scheduler-i-068ff113fc01b4be3.staging-shard1.us-west-2.aws.seadmin.com
   ProxyJump bastion.aws.seadmin.com
 
 Host stg2
   User macosta
-  HostName shipit-scheduler-i-029942d1890d955f7.staging-shard2.us-west-1.aws.seadmin.com
+  HostName shipit-scheduler-i-09ac518fed635e4a8.staging-shard2.us-west-1.aws.seadmin.com
   ProxyJump bastion.aws.seadmin.com
 
 Host slush
