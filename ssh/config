@@ -52,7 +52,7 @@ Host stg2
 
 Host slush
   User macosta
-  HostName shipit-scheduler-i-048ca28edd1e309d9.slush-staging.us-east-2.aws.seadmin.com
+  HostName shipit-scheduler-i-06a446bcfb4df8b13.slush.us-east-2.aws.seadmin.com
   ProxyJump bastion.aws.seadmin.com
 
 Host se1
