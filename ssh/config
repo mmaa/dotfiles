@@ -3,12 +3,12 @@ UseKeychain yes
 KeepAlive yes
 ServerAliveInterval 60
 
-Host mini.local
-  User      mini
-  HostName  mini.local
+Host mini62.local
+  User      mmaa
+  HostName  mini62.local
 
-Host mini
-  User      mini
+Host mini62
+  User      mmaa
   HostName  mmaa00.ddns.net
   Port      2222
 
