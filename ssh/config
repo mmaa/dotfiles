@@ -55,6 +55,11 @@ Host slush
   HostName shipit-scheduler-i-06a446bcfb4df8b13.slush.us-east-2.aws.seadmin.com
   ProxyJump bastion.aws.seadmin.com
 
+Host slush-a
+  User macosta
+  HostName shipit-scheduler-i-0b48663158e01dd68.slush-a.us-east-2.aws.seadmin.com
+  ProxyJump bastion.aws.seadmin.com
+
 Host se1
   User macosta
   HostName shipit-scheduler-i-053a861680e6d436f.production-shard1.us-west-2.aws.seadmin.com
