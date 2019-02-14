@@ -30,7 +30,7 @@ function ff
     end
 
     open $directory
-    ffmpeg -i $argv[1] -acodec copy -vcodec copy  -y -loglevel info -absf aac_adtstoasc -f mp4 $directory$filename$filetype
+    ffmpeg -i $argv[1] -acodec copy -vcodec copy -y -loglevel info -absf aac_adtstoasc -f mp4 $directory$filename$filetype
   end
 end
 
@@ -41,21 +41,21 @@ abbr -a bx bundle exec
 abbr -a rc rails console
 abbr -a rr rails runner
 
-function vi;    nvim $argv                                        ; end
-function tml;   tmux list-sessions                                ; end
-function gd;    git diff head $argv                               ; end
-function gdi;   git diff head --ignore-space-change $argv         ; end
-function gdt;   git difftool head $argv                           ; end
-function gg;    git add -A .; and gs                              ; end
-function gm;    git commit $argv                                  ; end
-function gwip;  gg; and git commit -m "WIP"                       ; end
-function gpl;   git pull --prune                                  ; end
-function gps;   git push $argv                                    ; end
-function gpz;   gpl; and gps                                      ; end
-function gs;    git status                                        ; end
-function l;     exa $argv                                         ; end
-function lt;    exa -T $argv                                      ; end
-function ll;    exa -l -a $argv                                   ; end
+function vi;    nvim $argv                                                 ; end
+function tml;   tmux list-sessions                                         ; end
+function gd;    git diff head $argv                                        ; end
+function gdi;   git diff head --ignore-space-change $argv                  ; end
+function gdt;   git difftool head $argv                                    ; end
+function gg;    git add -A . && gs                                         ; end
+function gm;    git commit $argv                                           ; end
+function gwip;  gg && git commit -m "WIP"                                  ; end
+function gpl;   git pull --prune                                           ; end
+function gps;   git push $argv                                             ; end
+function gpz;   gpl && gps                                                 ; end
+function gs;    git status                                                 ; end
+function l;     exa $argv                                                  ; end
+function lt;    exa -T $argv                                               ; end
+function ll;    exa -l -a $argv                                            ; end
 
 set -g -x EDITOR 'nvim'
 set -g -x PGDATA '/usr/local/var/postgres/'
