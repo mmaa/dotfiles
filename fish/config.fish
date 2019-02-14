@@ -62,6 +62,6 @@ set -g -x PGDATA '/usr/local/var/postgres/'
 set -g -x ERL_AFLAGS '-kernel shell_history enabled'
 set -g -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 
-status --is-interactive; and source (rbenv init -|psub)
-
 set PATH ./bin ~/bin $PATH
+
+source /usr/local/opt/asdf/asdf.fish
