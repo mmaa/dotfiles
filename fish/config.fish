@@ -62,6 +62,11 @@ set -g -x PGDATA '/usr/local/var/postgres/'
 set -g -x ERL_AFLAGS '-kernel shell_history enabled'
 set -g -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 
-set PATH ./bin ~/bin $PATH
+# homebrew
+set -g fish_user_paths /usr/local/bin /usr/local/sbin $fish_user_paths
 
-source /usr/local/opt/asdf/asdf.fish
+# asdf
+set -g fish_user_paths /usr/local/opt/asdf/bin /Users/mmaa/.asdf/shims $fish_user_paths
+
+# local
+set -g fish_user_paths ./bin ~/bin $fish_user_paths
