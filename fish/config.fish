@@ -63,10 +63,12 @@ set -g -x ERL_AFLAGS '-kernel shell_history enabled'
 set -g -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 
 # homebrew
-set -g fish_user_paths /usr/local/bin /usr/local/sbin $fish_user_paths
+# set -g fish_user_paths /usr/local/bin /usr/local/sbin $fish_user_paths
+set PATH /usr/local/bin /usr/local/sbin $PATH
 
 # asdf
-set -g fish_user_paths /usr/local/opt/asdf/bin /Users/mmaa/.asdf/shims $fish_user_paths
+source (brew --prefix asdf)/asdf.fish
+# set -g fish_user_paths /usr/local/opt/asdf/bin /Users/mmaa/.asdf/shims $fish_user_paths
 
 # local
 set -g fish_user_paths ./bin ~/bin $fish_user_paths
