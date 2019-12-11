@@ -9,12 +9,12 @@ Host mini62.local
 
 Host mini62
   User      mmaa
-  HostName  mmaa00.ddns.net
+  HostName  mmaaco.ddns.net
   Port      2222
 
 Host imp11
   User      mmaa
-  HostName  mmaa00.ddns.net
+  HostName  mmaaco.ddns.net
   Port      2225
 
 Host pi-hole.local
