@@ -2,15 +2,12 @@
 
 require "timeout"
 
-@start_time = Time.now
-
 def formatted(string)
   "\e[1m\e[35m#{string}\e[0m"
 end
 
 def log_exit
-  elapsed_time = (Time.now - @start_time).round(1)
-  puts formatted("Done (#{elapsed_time}s)")
+  puts formatted("Done (#{Time.now.strftime("%a, %H:%M:%S")})")
   exit
 end
 
