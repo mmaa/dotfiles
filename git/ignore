@@ -1,7 +1,6 @@
 .DS_Store
 .bundle/
 .livereload
-.tool-versions
 *.swp
 *.swo
 *.swn
@@ -13,4 +12,3 @@ build/
 .tm_properties
 tmtags
 tmtagsHistory
-*.local
