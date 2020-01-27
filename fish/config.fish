@@ -58,7 +58,6 @@ function lt;    exa -T $argv                                               ; end
 function ll;    exa -l -a $argv                                            ; end
 
 set -g -x EDITOR 'nvim'
-set -g -x PGDATA '/usr/local/var/postgres/'
 set -g -x ERL_AFLAGS '-kernel shell_history enabled'
 set -g -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 
