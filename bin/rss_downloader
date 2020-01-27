@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require "http"
+require "nokogiri"
+
+FEED_URL = "https://hdbits.org/rss/my?passkey=17ac48c400c94658e38043a8bb8c6489"
+
+logger = ->(string) {
+  time = Time.now
+
+  timestamp = time.iso8601
+  output = "#{timestamp} #{string}"
+
+  puts output
+
+  file_date = time.strftime("%Y_%m")
+  file_path = File.expand_path("~/log/rss_downloader_#{file_date}.log")
+  File.open(file_path, "a") { |file| file.puts output }
+}
+
+begin
+  raw_xml = HTTP.get(FEED_URL).to_s
+  parsed_xml = Nokogiri::XML(raw_xml)
+  items = parsed_xml.xpath("//item")
+
+  unless items.any?
+    logger.call("ping")
+    exit
+  end
+
+  items.reverse.each do |item|
+    title = item.xpath("title").text
+    link = item.xpath("link").text
+
+    logger.call(title)
+    system "cd ~/Desktop; curl -sSOJ '#{link}'"
+  end
+rescue => e
+  logger.call(e)
+end
