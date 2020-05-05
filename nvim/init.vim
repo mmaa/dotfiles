@@ -14,7 +14,7 @@ set nojoinspaces
 set list
 set list listchars=tab:▸\ ,trail:∙,nbsp:∴
 
-set background=light
+set background=dark
 colorscheme solarized
 highlight Comment cterm=italic
 highlight Search ctermbg=NONE ctermfg=NONE cterm=underline
