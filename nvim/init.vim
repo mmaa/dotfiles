@@ -4,6 +4,10 @@ source ~/.config/nvim/plugins.vim
 
 set hidden
 
+set backupdir=~/.local/share/nvim/backup
+set backup
+set writebackup
+
 set undofile
 set undolevels=9999 " maximum number of changes that can be undone
 set undoreload=9999 " maximum number lines to save for undo on a buffer reload
