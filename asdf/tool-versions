@@ -1,6 +1,4 @@
-ruby 2.6.5
-erlang 23.0.3
-elixir 1.10.4-otp-23
-yarn 1.22.4
-python 3.8.5
-nodejs 12.18.3
+ruby 2.7.5
+erlang 24.3.3
+elixir 1.13.4-otp-24
+nodejs 16.14.0

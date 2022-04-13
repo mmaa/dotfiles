@@ -44,8 +44,6 @@ abbr -a rr rails runner
 function vi;    nvim $argv                                                 ; end
 function tml;   tmux list-sessions                                         ; end
 function gd;    git diff head $argv                                        ; end
-function gdi;   git diff head --ignore-space-change $argv                  ; end
-function gdt;   git difftool head $argv                                    ; end
 function gg;    git add -A . && gs                                         ; end
 function gm;    git commit $argv                                           ; end
 function gwip;  gg && git commit -m "WIP"                                  ; end
@@ -58,8 +56,11 @@ function lt;    exa -T $argv                                               ; end
 function ll;    exa -l -a $argv                                            ; end
 
 set -g -x EDITOR 'nvim'
+set -g -x KERL_BUILD_DOCS 'yes'
 set -g -x ERL_AFLAGS '-kernel shell_history enabled'
 set -g -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
+set -g -x AWS_VAULT_KEYCHAIN_NAME 'login'
+set -g -x BAT_THEME 'GitHub'
 
 # homebrew
 set -g fish_user_paths /usr/local/bin /usr/local/sbin $fish_user_paths
@@ -68,4 +69,4 @@ set -g fish_user_paths /usr/local/bin /usr/local/sbin $fish_user_paths
 source /usr/local/opt/asdf/asdf.fish
 
 # local
-set -g fish_user_paths ./bin ~/bin $fish_user_paths
+set -g fish_user_paths ./bin ~/bin ~/.local/bin $fish_user_paths

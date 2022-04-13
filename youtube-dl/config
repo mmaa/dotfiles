@@ -1,6 +1,7 @@
 # --format=bestvideo+m4a
 # --recode-video=mp4
 # --merge-output-format=mp4
+# --format "(bestvideo+bestaudio/best)"
 --ffmpeg-location /usr/local/bin/ffmpeg
 --output "$HOME/Downloads/%(title)s.%(extractor)s.%(id)s.%(ext)s"
---format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
+# --format "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"

@@ -1,27 +1,36 @@
 call plug#begin('~/.config/nvim/plugins')
 
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
+" utilities
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'mileszs/ack.vim'
-Plug 'neomake/neomake'
-Plug 'tpope/vim-commentary'
-Plug 'scrooloose/nerdtree'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'kchmck/vim-coffee-script'
-Plug 'altercation/vim-colors-solarized'
-Plug 'jonathanfilip/vim-lucius'
-Plug 'elixir-editors/vim-elixir'
-Plug 'mhinz/vim-mix-format'
-Plug 'tpope/vim-endwise'
-Plug 'dag/vim-fish'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'dense-analysis/ale'
+
+" git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-Plug 'mxw/vim-jsx'
+Plug 'airblade/vim-gitgutter'
+
+" syntaxes
 Plug 'vim-ruby/vim-ruby'
-Plug 'junegunn/vim-easy-align'
-Plug 'chrisbra/csv.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'elixir-editors/vim-elixir'
+Plug 'dag/vim-fish'
+Plug 'mxw/vim-jsx'
+Plug 'chrisbra/csv.vim'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'junegunn/vim-easy-align'
+
+" themes
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'altercation/vim-colors-solarized'
+Plug 'jonathanfilip/vim-lucius'
 
 call plug#end()

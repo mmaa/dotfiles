@@ -1,52 +1,58 @@
 window:
   dimensions:
-    columns: 160
-    lines: 60
+    columns: 256
+    lines: 82
   padding:
-    x: 4
-    y: 4
-
-tabspaces: 4
-
-draw_bold_text_with_bright_colors: false
+    x: 5
+    y: 3
 
 font:
-  size: 14.0
-  offset:
-    x: 0
-    y: 3
-  glyph_offset:
-    x: 0
-    y: 2
+  size: 13
   normal:
-    family: "IBM Plex Mono"
-    style: "Regular"
+    family: Source Code Pro
+    style: Regular
   bold:
-    family: "IBM Plex Mono"
-    style: "Medium"
+    family: Source Code Pro
+    style: Semibold
   italic:
-    family: "IBM Plex Mono"
-    style: "Regular Italic"
+    family: Source Code Pro
+    style: Italic
 
+# Colors (LuciusLight)
 colors:
+  # Default colors
   primary:
-    background: '0xfdf6e3'
-    foreground: '0x657b83'
+    background: '#eeeeee'
+    foreground: '#444444'
+
+  # Cursor colors
+  cursor:
+    text: '#eeeeee'
+    cursor: '#5f87af'
+
+  # Selection colors
+  selection:
+    text: '#444444'
+    background: '#afd7ff'
+
+  # Normal colors
   normal:
-     black:   '0x003541'
-     red:     '0xdc322f'
-     green:   '0x859901'
-     yellow:  '0xb58901'
-     blue:    '0x268bd2'
-     magenta: '0xd33682'
-     cyan:    '0x2aa198'
-     white:   '0xeee8d5'
+    black:   '#444444'
+    red:     '#af0000'
+    green:   '#008700'
+    yellow:  '#af5f00'
+    blue:    '#005faf'
+    magenta: '#870087'
+    cyan:    '#008787'
+    white:   '#eeeeee'
+
+  # Bright colors
   bright:
-     black:   '0x002833'
-     red:     '0xcb4b16'
-     green:   '0x586e75'
-     yellow:  '0x657b83'
-     blue:    '0x839496'
-     magenta: '0x6c6ec6'
-     cyan:    '0x93a1a1'
-     white:   '0xfdf6e3'
+    black:   '#444444'
+    red:     '#af0000'
+    green:   '#008700'
+    yellow:  '#af5f00'
+    blue:    '#005faf'
+    magenta: '#870087'
+    cyan:    '#008787'
+    white:   '#eeeeee'

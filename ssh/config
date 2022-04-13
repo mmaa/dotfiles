@@ -3,19 +3,10 @@ UseKeychain yes
 KeepAlive yes
 ServerAliveInterval 60
 
-Host mini62.local
-  User      mmaa
-  HostName  mini62.local
-
-Host mini62
-  User      mmaa
-  HostName  mmaaco.ddns.net
-  Port      2222
-
 Host imp11
   User      mmaa
   HostName  mmaaco.ddns.net
-  Port      2225
+  Port      2222
 
 Host pi-hole.local
   User pi

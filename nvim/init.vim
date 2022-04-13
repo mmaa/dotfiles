@@ -2,15 +2,18 @@ set shell=/bin/sh
 
 source ~/.config/nvim/plugins.vim
 
-set hidden
+set autoread " automatically reload when files change
+set noshowmode
 
 set backupdir=~/.local/share/nvim/backup
 set backup
 set writebackup
+set updatetime=500
 
 set undofile
 set undolevels=9999 " maximum number of changes that can be undone
 set undoreload=9999 " maximum number lines to save for undo on a buffer reload
+
 
 set number
 set wrap
@@ -20,8 +23,8 @@ set list listchars=tab:▸\ ,trail:∙,nbsp:∴
 
 set background=light
 colorscheme lucius
-highlight Comment cterm=italic
-highlight Search ctermbg=NONE ctermfg=NONE cterm=underline
+highlight Comment cterm = italic
+" highlight Search ctermbg = NONE ctermfg = NONE cterm = underline
 
 set fileformats=unix
 set tabstop=4
@@ -43,7 +46,7 @@ set whichwrap+=<,>,h,l
 
 " mark columns
 " 81 (unix standard)
-let &colorcolumn="81"
+let &colorcolumn = 121
 
 " map the arrow keys to be based on display lines,
 " not physical lines
@@ -63,8 +66,11 @@ nmap <silent> <C-p> :cp<cr>
 
 let mapleader = ','
 
+" search files by name
+map <leader>t :Files<cr>
+
 " close current buffer and go to previous
-nnoremap <leader>d :bprevious <bar> :bd#<cr>
+nnoremap <leader>c :bprevious <bar> :bd#<cr>
 
 " toggle search highlighting
 nnoremap <esc> :noh<cr>

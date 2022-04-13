@@ -5,16 +5,9 @@
   excludesfile = /Users/mmaa/.gitignore
   quotepath = false
   editor = nvim
-  pager = diff-so-fancy | less --tabs=2 -RFX
+  pager = delta
 [color]
   ui = always
-[color "diff-highlight"]
-  oldNormal = "red bold"
-  oldHighlight = "red bold 52"
-  newNormal = "green bold"
-  newHighlight = "green bold 22"
-[gui]
-  fontdiff = -family Consolas -size 12 -underline 0 -overstrike 0
 [branch]
   autosetuprebase = always
 [push]
@@ -23,31 +16,17 @@
   cp = cherry-pick
   lg = log -n 10 --pretty=format:'%C(yellow)%H%C(reset) %Cgreen%cr%Creset %C(blue)%an%C(reset) %s'
   lga = log --pretty=format:'%C(yellow)%H%C(reset) %Cgreen%cr%Creset %C(blue)%an%C(reset) %s'
-[merge]
-  tool = Kaleidoscope
-[diff]
-  tool = Kaleidoscope
-  compactionHeuristic = true
-[difftool]
-  prompt = false
-[mergetool]
-  prompt = false
-  keepBackup = false
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true
-[filter "hawser"]
-  clean = git hawser clean %f
-  smudge = git hawser smudge %f
-  required = true
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
 [commit]
   verbose = true
 [interactive]
-  diffFilter = diff-highlight
+  diffFilter = delta --color-only
+[delta]
+  line-numbers = true
+  syntax-theme = GitHub
+[filter "lfs"]
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+[init]
+  defaultBranch = main

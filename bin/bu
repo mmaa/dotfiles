@@ -7,7 +7,7 @@ def formatted(string)
 end
 
 def log_exit
-  puts formatted("Done (#{Time.now.strftime("%a, %H:%M:%S")})")
+  puts formatted("Done (#{Time.now.strftime("%a, %H:%M")})")
   exit
 end
 
@@ -22,7 +22,7 @@ puts formatted("Upgradable:"), upgradable.join
 print "#{formatted("Upgrade? [y/N]")} \e[1m\e[34m"
 
 input = begin
-          Timeout::timeout(30) do
+          Timeout::timeout(60) do
             gets.strip.downcase
           end
         rescue Timeout::Error

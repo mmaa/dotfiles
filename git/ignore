@@ -1,5 +1,4 @@
 .DS_Store
-.bundle/
 .livereload
 *.swp
 *.swo
@@ -12,3 +11,4 @@ build/
 .tm_properties
 tmtags
 tmtagsHistory
+.nova/
